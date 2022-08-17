@@ -1,0 +1,80 @@
+body{
+    overflow: hidden;
+    margin: 0 0;
+}
+
+#bg{
+    position: absolute;
+}
+
+
+#trees{
+    position: absolute;
+    bottom: 200px;
+}
+
+#track{
+    position: absolute;
+    bottom: 0;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    height: 250px;
+    animation: trackmoving linear 14s  infinite ;
+    width: 80000px;
+   
+}
+
+
+
+#car{
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    bottom: 235px;
+    left: 143px;
+    animation: shake linear .5s infinite
+}
+
+#fronttyre{
+    left: 414px;
+    position: absolute;
+    bottom: 203px;
+    height: 84px;
+    animation: tyremoving linear .4s infinite;
+}
+
+#reartyre{
+    position: absolute;
+    left: 183px;
+    position: absolute;
+    bottom: 204px;
+    height: 84px;
+    animation: tyremoving linear .4s infinite;
+}
+
+
+@keyframes trackmoving{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes tyremoving{
+    100%{
+        transform: rotate(360deg);
+      }
+  
+  
+}
+
+@keyframes shake{
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
